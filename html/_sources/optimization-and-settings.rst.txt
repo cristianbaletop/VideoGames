@@ -1,0 +1,7 @@
+optimization\-and\-settings module
+==================================
+
+.. automodule:: optimization-and-settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
