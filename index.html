@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Сайт с лабораторными</title>
+  <style>
+    body {
+      position: relative;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .rectangle {
+      width: 200px;
+      height: 100px;
+      background-color: #eaeaea;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 100px;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px;
+      cursor: pointer;
+      position: absolute;
+    }
+    
+    #image-container {
+      position: relative;
+      background-image: url('img.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+    <p style="font-size: 40px; font-weight: bold;">Духнич Даниил ПИ-21Б</p>
+  <div id="image-container">
+    <div class="rectangle" onclick="window.location.href='ТРСИС, лаба 2/index.php'" style="top: 100px; left: 100px;">Лабораторная работа 2</div>
+    <div class="rectangle" onclick="window.location.href='ТРСИС, лаба 3/index.php'" style="top: 250px; left: 100px;">Лабораторная работа 3</div>
+    <div class="rectangle" onclick="window.location.href='ТРСИС, лаба 4/lab4/index.php'" style="top: 400px; left: 100px;">Лабораторная работа 4</div>
+    <div class="rectangle" onclick="window.location.href='ТРСИС, лаба 5/lab5/index.php'" style="top: 100px; left: 350px;">Лабораторная работа 5</div>
+    <div class="rectangle" onclick="window.location.href='ТРСИС, лаба 6/index.php'" style="top: 250px; left: 350px;">Лабораторная работа 6</div>
+    <div class="rectangle" onclick="window.location.href='ТРСИС, лаба 7/lab7/index.php'" style="top: 400px; left: 350px;">Лабораторная работа 7</div>
+  </div>
+</body>
+</html>
