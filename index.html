@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="wow.min.js"></script>
+    <script>new WOW().init()</script>
+    <script src="https://kit.fontawesome.com/fc5368a64a.js" crossorigin="anonymous"></script>
+    <title>Лабораторная работа № 6</title>
+</head>
+
+<script>
+    window.addEventListener('scroll', () => {
+        let distance = window.scrollY;
+        
+        document.querySelectorAll('.section').forEach((item, i)=>{
+
+            if  (item.offsetTop <= distance) {
+                
+                document.querySelectorAll(".navigationInnerItem, .navigationOuterItem").forEach((item) => {
+                    if (item.classList.contains('navigationInnerItemActive')) 
+                        item.classList.remove('navigationInnerItemActive');
+                    else if (item.classList.contains('navigationOuterItemActive')) 
+                        item.classList.remove('navigationOuterItemActive');
+                });
+
+                let tagA = document.querySelectorAll(".navigationInnerItem, .navigationOuterItem")[i];
+                if (tagA.classList[0] == 'navigationInnerItem')
+                    tagA.classList.add('navigationInnerItemActive');  
+                else if (tagA.classList[0] == 'navigationOuterItem')
+                    tagA.classList.add('navigationOuterItemActive');                  
+            }
+        });
+
+        var outerContainer = document.getElementById("outContainer");
+        var navigationMenu = document.getElementById("navMenu");
+
+        var queryOUT = document.querySelector("#outContainer");
+        var queryNAV = document.querySelector("#navMenu");
+        var queryFTR = document.querySelector("#footerID");
+             
+        var valuesOUT = queryOUT.getBoundingClientRect();
+        var valuesNAV = queryNAV.getBoundingClientRect();
+        var valuesFTR = queryFTR.getBoundingClientRect();
+
+        
+        
+        
+        if (valuesNAV.bottom > valuesFTR.top){
+            navigationMenu.style.opacity = 0+"%";
+         
+        }
+        else{
+            navigationMenu.style.opacity = 100+"%";
+          
+        }
+    });
+</script>
+<script>
+    document.ready(()=>{
+        document.querySelectorAll(".navigationInnerItem, .navigationOuterItem").forEach((current) => 
+        {
+            current.addEventListener('click', () => {
+                document.querySelectorAll(".navigationInnerItem, .navigationOuterItem").forEach((item) => {
+                    if (item.classList.contains('navigationInnerItemActive')) 
+                        item.classList.remove('navigationInnerItemActive');
+                    else if (item.classList.contains('navigationOuterItemActive')) 
+                        item.classList.remove('navigationOuterItemActive');
+                });
+            
+                if (current.classList[0] == 'navigationInnerItem')
+                    current.classList.add('navigationInnerItemActive');  
+                else if (current.classList[0] == 'navigationOuterItem')
+                    current.classList.add('navigationOuterItemActive');              
+            });
+            
+                
+        });
+    });
+
+</script>
+
+<body class="main">
+    <div class="header">
+        <div class="HELP_MANUAL">
+            <a class="buttonManual" target="_blank" href="https://github.com/cristianbaletop/VideoGames">Гит</a>
+            <a class="buttonManual" target="_blank" href="html/index.html">Руководство программиста</a>
+            <a class="buttonManual" target="_blank" href="ПППИ ЛР 5.docx">Руководство пользователя</a>
+        </div>
+    </div>
+
+    
+    ```html
+    <div class="outerContainer" id="outContainer">
+    
+        <div class="navigationMenu" id="navMenu">
+            <ul class="navigationList">
+                <li><a class="navigationOuterItem navigationOuterItemActive" href="#Introduction">Введение</a></li>
+                <li><a class="navigationOuterItem" href="#Chapter1">Основной</a></li>
+                <li><a class="navigationOuterItem" href="#Chapter2">Оптимизация и настройки</a></li>
+                <li><a class="navigationOuterItem" href="#Chapter3">Дополнительные возможности и пользовательский интерфейс</a></li>
+            </ul>
+        </div>
+    
+        <div class="container">
+            <section class="section" id="Introduction">
+                <div class="sectionContainer">
+                    <div class="introduction">
+                        <p class="titleStyle">Введение</p>
+                        <p class="paragraphMargin">В данном руководстве представлены три основных модуля разработки для создания видеоигр, аналогичные функционалу популярного движка Unity. Каждый модуль выполняет определенные функции, необходимые для создания, оптимизации и дополнения игрового процесса.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="Chapter1">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Основной</p>
+                    <p class="textStyle">Модуль `main.py` является основным файлом игры, который управляет выполнением основного игрового цикла и координирует работу различных модулей.</p>
+                    <p class="textStyle">Инструкции:</p>
+                    <ol class="instructionList">
+                        <li>Запуск игры:
+                            <ul>
+                                <li>Для запуска игры выполните файл `main.py`.</li>
+                            </ul>
+                        </li>
+                        <li>Игровой цикл:
+                            <ul>
+                                <li>Игровой цикл осуществляет следующие шаги:</li>
+                                <ol>
+                                    <li>Обновление сцены.</li>
+                                    <li>Обработка пользовательского ввода.</li>
+                                    <li>Обновление физики.</li>
+                                    <li>Отрисовка графики.</li>
+                                    <li>Применение искусственного интеллекта.</li>
+                                    <li>Воспроизведение анимаций.</li>
+                                    <li>Обработка частиц.</li>
+                                    <li>Обновление файловой системы.</li>
+                                </ol>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p class="textStyle">Пример использования:</p>
+                    <pre><code># Запуск основной функции игры
+    if __name__ == "__main__":
+        main()</code></pre>
+                </div>
+            </section>
+            <section class="section" id="Chapter2">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Оптимизация и настройки</p>
+                    <p class="textStyle">Модуль `optimization-and-settings.py` отвечает за оптимизацию игрового процесса и настройку параметров игры.</p>
+                    <p class="textStyle">Инструкции:</p>
+                    <ol class="instructionList">
+                        <li>Запуск оптимизации:
+                            <ul>
+                                <li>Для запуска оптимизации выполните файл `optimization-and-settings.py`.</li>
+                            </ul>
+                        </li>
+                        <li>Оптимизация игры:
+                            <ul>
+                                <li>Модуль осуществляет следующие шаги оптимизации:</li>
+                                <ol>
+                                    <li>Оптимизация многопользовательского режима.</li>
+                                    <li>Настройка физики частиц.</li>
+                                    <li>Оптимизация анимаций.</li>
+                                    <li>Настройка системы аудио.</li>
+                                    <li>Настройка камер.</li>
+                                    <li>Оптимизация коллизий и триггеров.</li>
+                                </ol>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p class="textStyle">Пример использования:</p>
+                    <pre><code># Запуск функции оптимизации
+    optimize_game()</code></pre>
+                </div>
+            </section>
+            <section class="section" id="Chapter3">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Дополнительные возможности и пользовательский интерфейс</p>
+                    <p class="textStyle">Модуль `additional-available-and-user-interface.py` добавляет дополнительные функции в игровой процесс и настраивает пользовательский интерфейс.</p>
+                    <p class="textStyle">Инструкции:</p>
+                    <ol class="instructionList">
+                        <li>Добавление дополнительных возможностей:
+                            <ul>
+                                <li>Для активации дополнительных возможностей выполните функцию `add_additional_features()`.</li>
+                            </ul>
+                        </li>
+                        <li>Описание шагов:
+                            <ul>
+                                <li>Функция `add_additional_features()` включает в себя следующие шаги:</li>
+                                <ol>
+                                    <li>Добавление системы освещения.</li>
+                                    <li>Запуск редактора анимаций.</li>
+                                    <li>Настройка системы сохранения и загрузки.</li>
+                                    <li>Подключение модуля расширений.</li>
+                                    <li>Установка пользовательского интерфейса.</li>
+                                    <li>Добавление дополнительных функций интерфейса.</li>
+                                </ol>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p class="textStyle">Пример использования:</p>
+                    <pre><code># Вызов функции для добавления дополнительных возможностей add_additional_features()</code></pre>
+                </div>
+            </section>          
+        </div>
+    </div>
+    ```
+    
+
+    <div class="footer" id="footerID">
+        
+    </div>
+</body>
+</html>
