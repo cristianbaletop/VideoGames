@@ -1,9 +1,0 @@
-PPPI_lr4
-========
-
-.. toctree::
-   :maxdepth: 4
-
-   additional-available-and-user-interface
-   main
-   optimization-and-settings

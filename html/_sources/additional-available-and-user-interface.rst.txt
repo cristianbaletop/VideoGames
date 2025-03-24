@@ -1,7 +1,0 @@
-additional\-available\-and\-user\-interface module
-==================================================
-
-.. automodule:: additional-available-and-user-interface
-   :members:
-   :undoc-members:
-   :show-inheritance:
